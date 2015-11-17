@@ -1,7 +1,9 @@
 // Overriding the default error handler just to show that it can be done.
 // This is to assist in debugging scripts.
+alert("pulling in error handler.");
 onerror = (function (globalObject, oldOnError)
 {
+	alert("creating the function.");
 	return function (errMsg, scriptUrl, lineNumber, columnNumber, errObj)
 	{
 		// Build error message.
